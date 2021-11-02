@@ -1,38 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import { TouchableOpacity, View, Image, Text, ImageBackground } from "react-native";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { useNavigation } from '@react-navigation/native';
 import ImportListBtn from '../ImportListBtn/ImportListBtn';
 import CheckBox from '@react-native-community/checkbox';
 import styles from './styles';
 
-const ProductCard = ({ post, isSelected, setSelectAll }) => {
+const ProductCard = ({ post, isCheckAll, setSelectAll, setCheckAll, isSelectAll }) => {
+
+  const navigation = useNavigation(); 
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   useEffect(() => {
-    setToggleCheckBox(isSelected)
-  }, [isSelected])
+    setToggleCheckBox(isCheckAll)
+  }, [isCheckAll])
+
+  // console.log("object", toggleCheckBox);
 
   const handleSelect = (newValue) => {
+    console.log("object", isSelectAll, isCheckAll)
     if(toggleCheckBox) {
+      console.log("Toggle ", toggleCheckBox)
        setSelectAll(false);
        setToggleCheckBox(newValue);
+    }
+    if(!toggleCheckBox && isCheckAll && !isSelectAll){
+      setCheckAll(true)
+      console.log("Console")
     }
     setToggleCheckBox(newValue);
   }
 
   return (
     <TouchableOpacity style={ !toggleCheckBox? styles.cardContainer : styles.cardContainerSelected} 
-    onPress = {() => {setToggleCheckBox(!toggleCheckBox)}}>
+    onLongPress = {() => handleSelect(true)} onPress={() => navigation.navigate('SelectProduct')}>
       <View>
         <View>
           <ImageBackground
             source={require('../../assets/images/prodcut1.png')}
             style = {styles.productImg}
           >
-            { toggleCheckBox ? (<View>
+            { toggleCheckBox ? (<View style={{flex: 1}}>
               <CheckBox
                 boxType = 'circle'
                 value={toggleCheckBox}
-                onValueChange={handleSelect}
+                onValueChange={() => handleSelect()}
                 tintColors = {{ true: '#7054D5' , false: '#FFFFFF' }}
                 style={styles.checkboxStyle}
               />
