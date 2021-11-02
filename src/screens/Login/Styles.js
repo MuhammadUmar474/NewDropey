@@ -90,7 +90,7 @@ const Styles = StyleSheet.create({
         marginHorizontal: '6%',
     },
     forgotBtn: { 
-        alignSelf: 'flex-start', 
+        alignSelf: 'flex-end', 
         marginHorizontal: wp('5%'),
     },
     forgotTxt: {
