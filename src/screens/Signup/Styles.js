@@ -43,7 +43,8 @@ const Styles = StyleSheet.create({
         borderWidth: 0.5,
     },
     openedPicker: {
-        minHeight: 250,
+        position: 'absolute',
+        // minHeight: 250,
     },
     lineView: { 
         flexDirection: 'row', 

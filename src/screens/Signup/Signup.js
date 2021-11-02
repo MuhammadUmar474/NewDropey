@@ -7,7 +7,6 @@ import { Picker } from '@react-native-picker/picker';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { LoginManager, AccessToken } from 'react-native-fbsdk-next';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FormInput from '../../components/Input/FormInput';
 import ButtonComp from '../../components/Button/ButtonComp';
@@ -96,8 +95,7 @@ import Toast from 'react-native-simple-toast';
     const itemsArray = items.map(i => {
         return {key: i.id, label: i.name, value: i.name}
     })
-    // console.log('array of items is', itemsArray)
-    // const [itemss, setItemss] = useState(itemsArray);
+
     LogBox.ignoreLogs(['Warning: ...']);
     LogBox.ignoreAllLogs();
 
@@ -124,9 +122,7 @@ import Toast from 'react-native-simple-toast';
     }
 
     function swapLanguage(itemValue) {
-
-        // console.log("Item Value" , itemValue);
-        // console.log("Language" , i18n.language);
+        
         if (itemValue == 'English') {
             i18n.changeLanguage('en').then(() => {
                 I18nManager.forceRTL(false);
@@ -148,7 +144,7 @@ import Toast from 'react-native-simple-toast';
 
     }
     return (
-        <View style={styles.container} showsVerticalScrollIndicator={false}>
+        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
             <View style={styles.languageView}>
                 <Image
@@ -186,7 +182,7 @@ import Toast from 'react-native-simple-toast';
                 <View style={open ? styles.openedPicker : null}>
                 
                     <DropDownPicker
-                        placeholder = {'Products to sell?(Optional)'}
+                        placeholder = {'Products to Sell? (Optional)'}
                         open={open}
                         value={value}
                         items={itemsArray}
@@ -233,7 +229,7 @@ import Toast from 'react-native-simple-toast';
                     </TouchableOpacity>
                 </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 

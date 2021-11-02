@@ -20,6 +20,7 @@ import StoreList from '../screens/StoreList/StoreList';
 import MyProfile from '../screens/MyProfile/MyProfile';
 import Language from '../screens/Language/Language';
 import FilterandSort from '../screens/FilterandSort/FilterandSort';
+import SelectProduct from '../screens/SelectProduct/SelectProduct';
 
 const MainStack = createNativeStackNavigator();
 const AuthStack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ function HomeScreenStack() {
       <HomeStack.Screen name="My Profile" component={MyProfile} />
       <HomeStack.Screen name="Language" component={Language} />
       <HomeStack.Screen name="Filter" component={FilterandSort} />
+      <HomeStack.Screen name="SelectProduct" component={SelectProduct} />
       <HomeStack.Screen name="Main" component={AuthScreen} />
     </HomeStack.Navigator>
   );
@@ -77,8 +79,6 @@ function Route() {
     }
     getStorageValue()
   }, {})
-
-  console.log("isLoggedIn", isloggedIn);
   const [isloggedIn, setisloggedIn] = useState('');
   return (
     <NavigationContainer ref={navigationRef}>
