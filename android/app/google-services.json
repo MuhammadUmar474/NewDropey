@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "447829425207",
+    "project_id": "dropey-e3506",
+    "storage_bucket": "dropey-e3506.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447829425207:android:258b63282e12a851f513b2",
+        "android_client_info": {
+          "package_name": "com.ovrflowapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447829425207-u7o5ciu69q6infrg716ahbaj2tmfrnq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ovrflowapp",
+            "certificate_hash": "68b7c2540aa8736d1fa7ac1d2e3463ec2422387f"
+          }
+        },
+        {
+          "client_id": "447829425207-c0l8ei4gavfd3eaff1v624ve1tu50g5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKG-4n1Q1gMHPcs7bs10eaTv4QqQ2uPiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447829425207-c0l8ei4gavfd3eaff1v624ve1tu50g5q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "447829425207-aquoajd963rtitfn25rndkhe1equ7quc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ovrflowapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

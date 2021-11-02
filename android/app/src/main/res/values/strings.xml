@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OvrflowApp</string>
+    <string name="facebook_app_id">411490803976938</string>
+    <string name="fb_login_protocol_scheme">fb411490803976938</string>
+</resources>
