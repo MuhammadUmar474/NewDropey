@@ -5,6 +5,7 @@ import styles from './styles';
 const FormInput = (props) => {
   return (
     <TextInput
+        secureTextEntry = {props.secureTextEntry}
         mode = {'outlined'}
         placeholder = {props?.placeholder}
         label = {props?.label}

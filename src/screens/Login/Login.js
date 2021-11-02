@@ -98,6 +98,7 @@ async function onFacebookButtonPress() {
     const Validation = () => {
         if (!email) {
             setEmailError({ error: true, msg: t('Please enter your email !') });
+            setPasswordError({ error: true, msg: t('Please enter password !') });
             return;
         }
         if (!isValidEmail(email)) {
@@ -165,7 +166,7 @@ async function onFacebookButtonPress() {
                 {emailError.error && (
                     <Text style={styles.errMsg}>{emailError.msg}</Text>
                 )}
-                <FormInput label={t('Password')} placeholder={t('Password')} value={password} onchange={(value) => { setPassword(value); setPasswordError({ error: false, msg: '' }) }} />
+                <FormInput label={t('Password')} placeholder={t('Password')} value={password} secureTextEntry={true} onchange={(value) => { setPassword(value); setPasswordError({ error: false, msg: '' }) }} />
                 {passwordError.error && (
                     <Text style={styles.errMsg}>{passwordError.msg}</Text>
                 )}

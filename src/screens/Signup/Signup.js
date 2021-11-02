@@ -109,6 +109,7 @@ import Toast from 'react-native-simple-toast';
     const Validation = () => {
         if (!name) {
             setNameError({ error: true, msg: t('Please enter your name !') });
+            setEmailError({ error: true, msg: t('Please enter your email !') });
             return;
         }
         if (!email) {
@@ -147,7 +148,7 @@ import Toast from 'react-native-simple-toast';
 
     }
     return (
-        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <View style={styles.container} showsVerticalScrollIndicator={false}>
 
             <View style={styles.languageView}>
                 <Image
@@ -232,7 +233,7 @@ import Toast from 'react-native-simple-toast';
                     </TouchableOpacity>
                 </View>
             </View>
-        </ScrollView>
+        </View>
     )
 }
 

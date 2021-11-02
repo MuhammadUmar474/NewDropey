@@ -26,6 +26,7 @@ export const signUp = (name, email) => async dispatch => {
             email: email
         })
         .then(response => {
+            console.log(response)
             console.log("Response from Backend::::::",response.data.message)
             showToast(response.data.message, 3000)
             return dispatch({
@@ -33,11 +34,12 @@ export const signUp = (name, email) => async dispatch => {
                 payload: response?.data,
             });
         });
-        console.log('signup complete');
+        // console.log('signup complete');
         RootNavigation.navigate('Login')
     } catch (error) {
-        console.log(error);
-        showToast("Signup Failed, Please Try another email", 2000)
+        console.log("Error Check ==>>",error.response);
+        showToast(JSON.stringify(error?.response?.data?.email[0]), 3000);
+        console.log("Error",error?.response?.data?.email);
         console.log('signUp failed');
     }
 }
@@ -51,7 +53,7 @@ export const logIn = (email, password, successCall) => async dispatch => {
             password: password,
         })
         .then(response => {
-            console.log(response.data);
+            console.log("Login data",response.data);
             storeToken(response.data.token);
             dispatch({
                 type: LOGIN,
@@ -64,9 +66,9 @@ export const logIn = (email, password, successCall) => async dispatch => {
         RootNavigation.navigate('Drawer');
         showToast("Login Successful", 2000);
     } catch (error) {
-        console.log(error);
+        console.log("respose check ==> ",error.response);
         console.log('Login failed');
-        showToast("Login Failed", 2000)
+        showToast(JSON.stringify(error?.response?.data?.error), 3000);
     }
 };
 
