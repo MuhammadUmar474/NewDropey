@@ -9,6 +9,7 @@ const initial_state = {
         message: '',
         itemsforProduct: [],
         filteredProducts: [],
+        pagination: {},
 }
 
 // const getToken = async () => {
@@ -100,10 +101,10 @@ export const getItemsReducer = (state = initial_state, action) => {
     const {payload} = action;
     switch(action.type){
         case GET_ITEMS:
-            // console.log('data in GetItems reducer', payload);
             return {
                 ...state,
-                itemsforProduct: payload
+                itemsforProduct: [...state.itemsforProduct, ...payload.data ],
+                pagination: payload.last_page,
             }
         default:
             return {...state}
