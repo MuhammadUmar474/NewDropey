@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Dimensions, Image, ImageBackground, TextInput, FlatList, Pressable } from 'react-native';
+import { View, Text, Dimensions, Image, ImageBackground, TextInput, FlatList, Pressable, ActivityIndicator } from 'react-native';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CheckBox from '@react-native-community/checkbox';
@@ -14,6 +14,8 @@ const HomefindProduct = ({ navigation, route }) => {
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [isSelectAll, setIsSelectAll] = useState(false);
   const [searchProduct, setSearchProduct] = useState();
+  const [currentPage, setcurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const dispatch = useDispatch();
   let sortReceived = route.params;
@@ -22,12 +24,29 @@ const HomefindProduct = ({ navigation, route }) => {
   const items = useSelector((state) => state?.getItems);
   useEffect(() => {
     if (!sortReceived) {
-      dispatch(getItems);
+      dispatch(getItems(currentPage));
+      setIsLoading(true);
     }
   }, [dispatch]);
 
   const setSelectAll = (value) => {
     setIsSelectAll(value);
+  }
+
+  const renderLoader = () => {
+    return (
+      isLoading ?
+      <View style={styles.loader}>
+        <ActivityIndicator size="large" color="#aaa" />
+      </View> : null
+    )
+  }
+
+  const loadMoreItem = () => {
+    setcurrentPage(currentPage+1);
+    if(items.last_page > currentPage){
+    dispatch(getItems(currentPage));
+  }
   }
   return (
     <View style={styles.container}>
@@ -111,17 +130,20 @@ const HomefindProduct = ({ navigation, route }) => {
         <View style={{ flex: 1, marginTop: hp('-12%') }}>
           <FlatList
             showsVerticalScrollIndicator={false}
-            data={items.itemsforProduct.data}
+            data={items.itemsforProduct}
             numColumns={2}
             renderItem={({ item }) =>
               <ProductCard
                 post={item} 
-                isCheckAll={isCheckAll} 
-                setSelectAll={setSelectAll} 
+                isCheckAll={isCheckAll}
+                setSelectAll={setSelectAll}
                 setCheckAll={value => { setIsCheckAll(value); setSelectAll(value) }}
                 isSelectAll={isSelectAll}
               />
             }
+            ListFooterComponent={renderLoader}
+            onEndReached={loadMoreItem}
+            onEndReachedThreshold={0}
           />
 
         </View>
