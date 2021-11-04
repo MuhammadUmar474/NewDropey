@@ -167,7 +167,7 @@ const DrawerContent = (props) => {
                         <View style={{width: wp('100%')}}>
                         <DrawerItem
                         label= "Logout"
-                        labelStyle={{ flex: 1,fontSize: 14,color: '#756D86', fontFamily: 'Montserrat-Regular', width: wp('100%')}}
+                        labelStyle={{ flex: 1,fontSize: 14, color: '#756D86', fontFamily: 'Montserrat-Regular', width: wp('100%')}}
                         onPress= {() => {dispatch(logOut())}}
                         />
                         </View>
