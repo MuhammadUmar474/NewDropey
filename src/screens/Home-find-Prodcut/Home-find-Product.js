@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Dimensions, Image, ImageBackground, TextInput, FlatList, Pressable, ActivityIndicator } from 'react-native';
+import { View, Text, Image, ImageBackground, TextInput, FlatList, Pressable, ActivityIndicator } from 'react-native';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CheckBox from '@react-native-community/checkbox';
-import productsdata from '../../assets/data/productsdata';
-const { width } = Dimensions.get('window').width;
-const { height } = Dimensions.get('window').height;
 import { getItems } from '../../redux/actions/auth';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ProductCard from '../../components/ProductCard/ProductCard';
+ 
 const HomefindProduct = ({ navigation, route }) => {
+
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [isSelectAll, setIsSelectAll] = useState(false);
   const [searchProduct, setSearchProduct] = useState();
