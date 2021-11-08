@@ -17,10 +17,12 @@ const HomefindProduct = ({ navigation, route }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const dispatch = useDispatch();
+
   let sortReceived = route.params;
   console.log("Sort Received", sortReceived);
 
   const items = useSelector((state) => state?.getItems);
+
   useEffect(() => {
     if (!sortReceived) {
       dispatch(getItems(currentPage));
