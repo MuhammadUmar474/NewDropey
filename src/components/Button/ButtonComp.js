@@ -5,8 +5,8 @@ import styles from './styles';
 const ButtonComp = (props) => {
 
   return (
-    <TouchableOpacity style={styles.buttonLogin} onPress = {props.onPress}>
-      <Text style={styles.logInTxt}>{props.btnName}</Text>
+    <TouchableOpacity style={[styles.buttonLogin, props.styleBtn]} onPress = {props.onPress}>
+      <Text style={[styles.logInTxt, props.styleTxt]}>{props.btnName}</Text>
     </TouchableOpacity>
   );
 };
