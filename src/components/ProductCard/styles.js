@@ -99,7 +99,7 @@ supplierTxt: {
 premiumIcon: {
   height: hp('7%'),
   width: wp('25%'),
-  marginLeft: wp('1%%')
+  marginLeft: wp('1%')
 },
 fireIcon: {
   height: hp('7%'),
