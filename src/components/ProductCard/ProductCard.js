@@ -32,7 +32,7 @@ const ProductCard = ({ post, isCheckAll, setSelectAll, setCheckAll, isSelectAll 
 
   return (
     <TouchableOpacity style={ !toggleCheckBox? styles.cardContainer : styles.cardContainerSelected} 
-    onLongPress = {() => handleSelect(true)} onPress={() => navigation.navigate('SelectProduct')}>
+    onLongPress = {() => handleSelect(true)} onPress={() => navigation.navigate('SelectProduct', {post: post})}>
       <View>
         <View>
           <ImageBackground

@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, Image, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
-import { onChange } from 'react-native-reanimated';
 import { SliderBox } from "react-native-image-slider-box";
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import styles from './Styles';
 import ButtonComp from '../../components/Button/ButtonComp';
-const SelectProduct = ({ navigation }) => {
+const SelectProduct = ({ navigation, route }) => {
 
-    const width = wp('100%');
-    const height = hp('40%');
 
     const images = [
-        require('../../assets/images/bgforslider1.jpg'),
-        require('../../assets/images/prodcut1.png'),
-        require('../../assets/images/prodcut3.png'),
-
+      require('../../assets/images/bgforslider1.jpg'),
+      require('../../assets/images/prodcut1.png'),
+      require('../../assets/images/prodcut3.png'),
     ];
+
+  const items = route.params;
+  console.log("Product Details Received ==> " , items.post);
     return (
         <SafeAreaView style={styles.container}>
           <View>
@@ -56,7 +55,7 @@ const SelectProduct = ({ navigation }) => {
               <Text style={styles.titleTxt}>Women's Sleeveless Ruffle Front {'\n'}Slit Bodycon Dress</Text>
               <View style={{flexDirection: 'row', marginTop: hp('1%'),}}>
                 <Text style={styles.countryTxt}>From United State By</Text>
-                <Text style={styles.sellerTxt}> Ivory Felix</Text>
+                <Text style={styles.sellerTxt}> {items.post?.owner_name?.name}</Text>
               </View>
 
               <Image
@@ -67,18 +66,18 @@ const SelectProduct = ({ navigation }) => {
               <View style={{flexDirection: 'row', marginTop: hp('2%')}}>
                   <View>
                     <Text style={styles.priceHeadingTxt}>Listing Price</Text>
-                    <Text style={styles.priceTxt}>$ 9.75</Text>
+                    <Text style={styles.priceTxt}>$ {items.post?.purchase_price}</Text>
                   </View>
 
                   <View style={{marginLeft: wp('35%')}}>
                     <Text style={styles.priceHeadingTxt}>Retail Price</Text>
-                    <Text style={styles.priceTxt}>$ 14.58</Text>
+                    <Text style={styles.priceTxt}>$ {items.post?.details.retail_price}</Text>
                   </View>
               </View>
 
               <Text style={styles.descriptionHeadingTxt}>Product Description:</Text>
 
-              <Text style={styles.descriptionTxt}>This stylist sleeveless dress features a ruffle detail and side slit and is perfect for a party!</Text>
+              <Text style={styles.descriptionTxt}>{items.post?.description}</Text>
 
               <View style={styles.row}>
                   <Text style={{color: '#777777', fontSize: 30}}>{'\u2022' + " "}</Text>
@@ -110,5 +109,5 @@ const SelectProduct = ({ navigation }) => {
         </SafeAreaView>
     )
 }
+export default connect()(SelectProduct);
 
-export default SelectProduct;
