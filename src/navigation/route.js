@@ -21,6 +21,7 @@ import MyProfile from '../screens/MyProfile/MyProfile';
 import Language from '../screens/Language/Language';
 import FilterandSort from '../screens/FilterandSort/FilterandSort';
 import SelectProduct from '../screens/SelectProduct/SelectProduct';
+import productVariation from '../screens/productVariation/productVariation';
 
 const MainStack = createNativeStackNavigator();
 const AuthStack = createNativeStackNavigator();
@@ -43,6 +44,8 @@ function HomeScreenStack() {
       <HomeStack.Screen name="Filter" component={FilterandSort} />
       <HomeStack.Screen name="SelectProduct" component={SelectProduct} />
       <HomeStack.Screen name="Main" component={AuthScreen} />
+      <HomeStack.Screen name="productVariation" component={productVariation} />
+
     </HomeStack.Navigator>
   );
 }
