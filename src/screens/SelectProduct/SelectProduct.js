@@ -100,7 +100,7 @@ const SelectProduct = ({ navigation, route }) => {
 
               <ButtonComp btnName="Add To Import List" styleBtn={{backgroundColor: '#61C064'}}/>
 
-              <ButtonComp btnName="Open Variations" styleBtn={{backgroundColor: '#fff', borderWidth: 0.2,}} styleTxt={{color: '#756D86', }}/>
+              <ButtonComp btnName="Open Variations" styleBtn={{backgroundColor: '#fff', borderWidth: 0.2,}} styleTxt={{color: '#756D86', }} onPress={() => navigation.navigate('productVariation')}/>
 
               <ButtonComp btnName="Order Sample" styleBtn={{backgroundColor: '#fff', borderWidth: 0.2,}} styleTxt={{color: '#756D86', }}/>
 
@@ -110,4 +110,3 @@ const SelectProduct = ({ navigation, route }) => {
     )
 }
 export default connect()(SelectProduct);
-
