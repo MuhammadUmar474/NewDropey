@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   premiumIconView: {
     flexDirection: 'row', 
-    top: hp('24%'), 
+    top: hp('28%'), 
     position: 'absolute',
   },
   contentMainView: {
