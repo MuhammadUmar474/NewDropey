@@ -66,18 +66,18 @@ const SelectProduct = ({ navigation, route }) => {
               <View style={{flexDirection: 'row', marginTop: hp('2%')}}>
                   <View>
                     <Text style={styles.priceHeadingTxt}>Listing Price</Text>
-                    <Text style={styles.priceTxt}>$ {items.post?.purchase_price}</Text>
+                    <Text style={styles.priceTxt}>$ {items?.post?.purchase_price}</Text>
                   </View>
 
                   <View style={{marginLeft: wp('35%')}}>
                     <Text style={styles.priceHeadingTxt}>Retail Price</Text>
-                    <Text style={styles.priceTxt}>$ {items.post?.details.retail_price}</Text>
+                    <Text style={styles.priceTxt}>$ {items?.post?.details.retail_price}</Text>
                   </View>
               </View>
 
               <Text style={styles.descriptionHeadingTxt}>Product Description:</Text>
 
-              <Text style={styles.descriptionTxt}>{items.post?.description}</Text>
+              <Text style={styles.descriptionTxt}>{items?.post?.description}</Text>
 
               <View style={styles.row}>
                   <Text style={{color: '#777777', fontSize: 30}}>{'\u2022' + " "}</Text>

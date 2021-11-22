@@ -135,7 +135,7 @@ const HomefindProduct = ({ navigation, route }) => {
             numColumns={2}
             renderItem={({ item }) =>
               <ProductCard
-                post={item} 
+                post={item}
                 isCheckAll={isCheckAll}
                 setSelectAll={setSelectAll}
                 setCheckAll={value => { setIsCheckAll(value); setSelectAll(value) }}
