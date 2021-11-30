@@ -3,7 +3,6 @@ import { GET_CATEGORIES, LOGIN, PASSWORD_RESET, SIGNUP, LOGOUT, GET_ITEMS, FILTE
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as RootNavigation from '../../navigation/RootNavigator';
 import Toast from 'react-native-simple-toast';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 
   const showToast = (message, duration) => {
     Toast.show(message, duration ? Toast.LONG : Toast.SHORT);

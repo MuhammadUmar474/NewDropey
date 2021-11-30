@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import styles from './Styles';
 import DropDownPicker from 'react-native-dropdown-picker';
-import SelectableChips from 'react-native-chip/SelectableChips'
+import SelectableChips from 'react-native-chip/SelectableChips';
 import ButtonComp from '../../components/Button/ButtonComp';
 import { connect, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
