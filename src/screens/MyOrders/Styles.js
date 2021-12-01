@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
     height: hp('11%'),
     backgroundColor: '#7054D5'
     },
+  topViewApi: {
+    height: hp('11%'),
+    width: wp('100%'),
+    backgroundColor: '#7054D5'
+    },
   backBtn: {
     zIndex:1,
     marginTop: hp('6%'),
@@ -64,7 +69,7 @@ const styles = StyleSheet.create({
     marginTop: hp('2%'),
     flexDirection: 'row',
     alignSelf: 'flex-end',
-    height: hp('5%'), 
+    height: hp('4%'), 
     width: wp('30%'), 
     backgroundColor: '#61C064',
     justifyContent: 'space-around',
@@ -80,6 +85,45 @@ const styles = StyleSheet.create({
   importIcon: { 
     height:12, 
     width: 12, 
+    backgroundColor: 'transparent',
+  },
+  bulkBtn: {
+    marginTop: hp('2%'),
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    height: hp('4%'), 
+    width: wp('30%'), 
+    backgroundColor: '#7054D5',
+    justifyContent: 'space-around',
+    paddingHorizontal: wp('2%'),
+    alignItems: 'center' ,
+    borderRadius: 30, 
+  },
+  bulkTxt: { 
+    fontSize: 11, 
+    color: '#FFFFFF', 
+    fontFamily: 'Montserrat-SemiBold',
+  },
+  downloadBtn: {
+    marginTop: hp('2%'),
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    height: hp('4%'), 
+    width: wp('35%'), 
+    backgroundColor: '#ABB3BB',
+    justifyContent: 'space-around',
+    paddingHorizontal: wp('2%'),
+    alignItems: 'center' ,
+    borderRadius: 30, 
+  },
+  downloadTxt: { 
+    fontSize: 11, 
+    color: '#756D86', 
+    fontFamily: 'Montserrat-SemiBold',
+  },
+  downloadIcon: { 
+    height:14, 
+    width: 14, 
     backgroundColor: 'transparent',
   },
   orderListTxt: {
@@ -165,6 +209,13 @@ swipeDown: {
   width: wp('12%'),
   alignSelf: 'center',
   },
+  selectAllTxt: { 
+  fontSize: 12, 
+  color: '#2D3D52', 
+  marginLeft: wp('1%'), 
+  marginTop: hp('1.3%'),
+  fontFamily: 'Montserrat-Medium'
+},
 });
 
 export default styles;

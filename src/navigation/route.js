@@ -22,10 +22,13 @@ import Language from '../screens/Language/Language';
 import FilterandSort from '../screens/FilterandSort/FilterandSort';
 import SelectProduct from '../screens/SelectProduct/SelectProduct';
 import productVariation from '../screens/productVariation/productVariation';
+import OrderDetails from '../screens/OrderDetails/OrderDetails';
 
 const MainStack = createNativeStackNavigator();
 const AuthStack = createNativeStackNavigator();
 const HomeStack = createNativeStackNavigator();
+const OrderStack = createNativeStackNavigator();
+
 const Drawer = createDrawerNavigator();
 
 function HomeScreenStack() {
@@ -35,7 +38,7 @@ function HomeScreenStack() {
       <HomeStack.Screen name="Find Products" component={FindProducts} />
       <HomeStack.Screen name="Push Products" component={PushProducts} />
       <HomeStack.Screen name="My Products" component={MyProducts} />
-      <HomeStack.Screen name="My Orders" component={MyOrders} />
+      <HomeStack.Screen name="My Orders" component={OrderScreens} />
       <HomeStack.Screen name="Store Settings" component={StoreSettings} />
       <HomeStack.Screen name="Help Center" component={HelpCenter} />
       <HomeStack.Screen name="Store List" component={StoreList} />
@@ -47,6 +50,15 @@ function HomeScreenStack() {
       <HomeStack.Screen name="productVariation" component={productVariation} />
 
     </HomeStack.Navigator>
+  );
+}
+
+function OrderScreens() {
+  return (
+    <OrderStack.Navigator screenOptions={{headerShown: false }}>
+      <OrderStack.Screen name="My Orders" component={MyOrders} />
+      <OrderStack.Screen name="Order Details" component={OrderDetails} />
+    </OrderStack.Navigator>
   );
 }
 

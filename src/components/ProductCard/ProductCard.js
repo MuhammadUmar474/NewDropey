@@ -17,15 +17,15 @@ const ProductCard = ({ post, isCheckAll, setSelectAll, setCheckAll, isSelectAll 
   // console.log("object", toggleCheckBox);
 
   const handleSelect = (newValue) => {
-    console.log("object", isSelectAll, isCheckAll)
+    // console.log("object", isSelectAll, isCheckAll)
     if(toggleCheckBox) {
-      console.log("Toggle ", toggleCheckBox)
+      // console.log("Toggle ", toggleCheckBox)
        setSelectAll(false);
        setToggleCheckBox(newValue);
     }
     if(!toggleCheckBox && isCheckAll && !isSelectAll){
       setCheckAll(true)
-      console.log("Console")
+      // console.log("Console")
     }
     setToggleCheckBox(newValue);
   }
