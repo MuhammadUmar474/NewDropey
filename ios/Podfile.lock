@@ -357,6 +357,8 @@ PODS:
   - react-native-fbsdk-next/Share (4.6.0):
     - FBSDKShareKit (~> 9.3)
     - React-Core
+  - react-native-pager-view (5.4.9):
+    - React-Core
   - react-native-restart (0.0.22):
     - React-Core
   - react-native-safe-area-context (3.3.2):
@@ -528,6 +530,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-fbsdk-next (from `../node_modules/react-native-fbsdk-next`)
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-simple-toast (from `../node_modules/react-native-simple-toast`)
@@ -625,6 +628,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-fbsdk-next:
     :path: "../node_modules/react-native-fbsdk-next"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-restart:
     :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
@@ -725,6 +730,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 8c0517dee5e8c70cd6c3066f20213ff7ce54f176
   React-logger: bfddd3418dc1d45b77b822958f3e31422e2c179b
   react-native-fbsdk-next: a0dd8905af573ec4d21b7bc398423ccaa2ce2b07
+  react-native-pager-view: 3ee7d4c7697fb3ef788346e834a60cca97ed8540
   react-native-restart: d4ea7637e193da7558d229b3704d500ec0d75f9c
   react-native-safe-area-context: 5cf05f49df9d17261e40e518481f2e334c6cd4b5
   react-native-simple-toast: b986e6c1befdc211af3df1bae293278a44e32990
