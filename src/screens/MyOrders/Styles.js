@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   },
   downloadTxt: { 
     fontSize: 11, 
-    color: '#756D86', 
+    color: '#000000D8', 
     fontFamily: 'Montserrat-SemiBold',
   },
   downloadIcon: { 
@@ -139,83 +139,81 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start'
   },
   btnStyle: {
-  width: wp('44%'),
-  height: hp('7%'),
-  backgroundColor: '#E1E4E8',
-  borderRadius: 5,
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginTop: hp('3%'),
-},
-btnTxt: {
-  fontFamily: 'Montserrat-SemiBold',
-  color: '#756D86', 
-  fontSize: 12,
-},
-btnSearchStyle: {
-  width: wp('44%'),
-  height: hp('7%'),
-  backgroundColor: '#7054D5',
-  borderRadius: 5,
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginTop: hp('3%'),
-},
-btnSearchTxt: {
-  fontFamily: 'Montserrat-SemiBold',
-  color: '#fff', 
-  fontSize: 12,
-},
-
-centeredView: {
-  flex: 1,
-  justifyContent: 'flex-end',
-  alignItems: 'flex-end',
-  // marginTop: 22
-},
-modalView: {
-  height: hp('40%'),
-  width: wp('100%'),
-  backgroundColor: "white",
-  borderTopRightRadius: 35,
-  borderTopLeftRadius: 35,
-  shadowColor: "#707070",
-  shadowOffset: {
-    width: 0,
-    height: 2
+    width: wp('44%'),
+    height: hp('7%'),
+    backgroundColor: '#E1E4E8',
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: hp('3%'),
   },
-  shadowOpacity: 1,
-  shadowRadius: 4,
-  elevation: 5
-},
-filterTxt: {
-  marginTop: hp('1%'),
-  fontFamily: 'Montserrat-SemiBold',
-  fontSize: 16,
-  color: '#2C2C2C',
-
-},
-filterLineTxt: {
-  marginTop: hp('1%'),
-  fontFamily: 'Montserrat-Medium',
-  fontSize: 12,
-  color: '#777777',
-},
-swipeDown: {
-  borderRadius: 2,
-  marginTop: hp('1.5%'), 
-  borderBottomColor: '#7054D5', 
-  borderBottomWidth: 5,
-  width: wp('12%'),
-  alignSelf: 'center',
+  btnTxt: {
+    fontFamily: 'Montserrat-SemiBold',
+    color: '#756D86', 
+    fontSize: 12,
+  },
+  btnSearchStyle: {
+    width: wp('44%'),
+    height: hp('7%'),
+    backgroundColor: '#7054D5',
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: hp('3%'),
+  },
+  btnSearchTxt: {
+    fontFamily: 'Montserrat-SemiBold',
+    color: '#fff', 
+    fontSize: 12,
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    // marginTop: 22
+  },
+  modalView: {
+    height: hp('40%'),
+    width: wp('100%'),
+    backgroundColor: "white",
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
+    shadowColor: "#707070",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  filterTxt: {
+    marginTop: hp('1%'),
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 16,
+    color: '#2C2C2C',
+  },
+  filterLineTxt: {
+    marginTop: hp('1%'),
+    fontFamily: 'Montserrat-Medium',
+    fontSize: 12,
+    color: '#777777',
+  },
+  swipeDown: {
+    borderRadius: 2,
+    marginTop: hp('1.5%'), 
+    borderBottomColor: '#7054D5', 
+    borderBottomWidth: 5,
+    width: wp('12%'),
+    alignSelf: 'center',
   },
   selectAllTxt: { 
-  fontSize: 12, 
-  color: '#2D3D52', 
-  marginLeft: wp('1%'), 
-  marginTop: hp('1.3%'),
-  fontFamily: 'Montserrat-Medium'
-},
+    fontSize: 12, 
+    color: '#2D3D52', 
+    marginLeft: wp('1%'), 
+    marginTop: hp('1.3%'),
+    fontFamily: 'Montserrat-Medium'
+  },
 });
 
 export default styles;
