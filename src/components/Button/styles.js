@@ -10,11 +10,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: hp('3%'),
+    borderColor: 'transparent',
+    borderWidth: 1
 },
 logInTxt: {
     fontFamily: 'Montserrat-SemiBold',
     color: '#fff', 
-    fontSize: 15,
+    fontSize: 12,
 },
 
 });

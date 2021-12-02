@@ -22,16 +22,14 @@ const styles = StyleSheet.create({
     borderColor: '#E1E4E8',
     borderWidth: 1
   },
-
   tagsView: {
     marginTop: hp('1.5%'),
-    height: hp('7%'), 
+    height: hp('15%'), 
     width: wp('90%'),
     backgroundColor: '#fff', 
-    borderRadius: 5, 
-    paddingHorizontal: 15,
+    borderRadius: 5,
     borderColor: '#E1E4E8',
-    borderWidth: 1
+    borderWidth: 1,
   },
 });
 

@@ -49,7 +49,7 @@ const PushProducts = ({navigation}) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{marginTop: hp('1%'), height: hp('100%')}}>
+            <View style={{marginTop: hp('1%'), height: hp('128%')}}>
                 <Tab.Navigator
                     tabBarOptions={{
                     activeTintColor: "#7054D5",
