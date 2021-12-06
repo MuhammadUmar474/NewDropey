@@ -24,7 +24,7 @@ const Product = () => {
     return (
         <ScrollView style={styles.container}>
             <Image 
-                source={require('../../../assets/images/prodcut1.png')}
+                source={require('../../../assets/images/prodcut2.png')}
                 style={{height: hp('40%'), marginTop: hp('1%')}}
                 width = {'100%'}
             />
@@ -73,16 +73,6 @@ const Product = () => {
                         containerStyle={{ width: wp('90%') }}
                         textStyle={{ color: '#777777' }}
                     />
-                </View>
-                
-                <View>
-
-                    <ButtonComp btnName = "Save" styleBtn ={{marginTop: hp('1.5%')}}/>
-                    
-                    <ButtonComp btnName = "Push To Store" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#61C064'}}/>
-
-                    <ButtonComp btnName = "Remove" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#FFFFFF', borderColor: '#E1E4E8'}} styleTxt={{color: '#756D86'}}/>
-
                 </View>
             </View>
         </ScrollView>
