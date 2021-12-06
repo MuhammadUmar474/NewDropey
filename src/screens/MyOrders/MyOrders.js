@@ -133,7 +133,7 @@ const MyOrders = ({navigation}) => {
                     </TouchableOpacity>
                 </View>
 
-                <View style={{marginTop: hp('1.5%')}}>
+                <View style={{marginTop: hp('1%')}}>
                     <MyOrderCard />
                 </View>
             </ScrollView>

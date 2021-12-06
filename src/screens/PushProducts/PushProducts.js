@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, ScrollView , Modal, Pressable} from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import ButtonComp from '../../components/Button/ButtonComp';
 import Description from './Description/Description';
 import Variants from './Variants/Variants';
 import Images from './Images/Images';
@@ -49,7 +50,7 @@ const PushProducts = ({navigation}) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{marginTop: hp('1%'), height: hp('128%')}}>
+            <View style={{marginTop: hp('1%'), height: hp('100%')}}>
                 <Tab.Navigator
                     tabBarOptions={{
                     activeTintColor: "#7054D5",
@@ -79,6 +80,16 @@ const PushProducts = ({navigation}) => {
                     />
                 </Tab.Navigator>
             </View>
+
+            <View style={{marginHorizontal: wp('5%')}}>
+
+                    <ButtonComp btnName = "Save" styleBtn ={{marginTop: hp('1.5%')}}/>
+                    
+                    <ButtonComp btnName = "Push To Store" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#61C064'}}/>
+
+                    <ButtonComp btnName = "Remove" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#FFFFFF', borderColor: '#E1E4E8'}} styleTxt={{color: '#756D86'}}/>
+
+                </View>
             </ScrollView>
             </View> 
             :
