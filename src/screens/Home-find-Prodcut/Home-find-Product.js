@@ -49,6 +49,11 @@ const HomefindProduct = ({ navigation, route }) => {
     dispatch(getItems(currentPage));
   }
   }
+
+  const searchProductfunc = (Text) => {
+    console.log(Text);
+    setSearchProduct(items.itemsforProduct.filter(Text => items.itemsforProduct.name == Text));
+  }
   return (
     <View style={styles.container}>
       <View style={{ flex: 1 }}>
@@ -87,7 +92,7 @@ const HomefindProduct = ({ navigation, route }) => {
                 <TextInput
                   style={styles.searchProductTxt}
                   placeholder="Search Products"
-                  onChangeText={setSearchProduct}
+                  onChangeText={searchProductfunc}
                   value={searchProduct}
                 />
               </View>

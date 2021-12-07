@@ -80,6 +80,15 @@ const Description = () => {
                             />
                         </TouchableOpacity>
                     </View>
+                </View>
+            <View >
+
+                <ButtonComp btnName = "Save" styleBtn ={{marginTop: hp('1.5%')}}/>
+                
+                <ButtonComp btnName = "Push To Store" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#61C064'}}/>
+
+                <ButtonComp btnName = "Remove" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#FFFFFF', borderColor: '#E1E4E8'}} styleTxt={{color: '#756D86'}}/>
+
             </View>
         </View>
     )
