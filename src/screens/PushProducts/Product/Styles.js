@@ -24,13 +24,32 @@ const styles = StyleSheet.create({
   },
   tagsView: {
     marginTop: hp('1.5%'),
-    height: hp('15%'), 
+    height: hp('7%'), 
     width: wp('90%'),
     backgroundColor: '#fff', 
     borderRadius: 5,
     borderColor: '#E1E4E8',
     borderWidth: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 15,
   },
+  tagStyle: { 
+    flexDirection: 'row', 
+    alignItems: 'center',
+    justifyContent: 'center',
+    justifyContent: 'space-around',
+    height: 28,
+    width: 62,
+    borderRadius: 4, 
+    backgroundColor: '#DDE6F1', 
+    borderColor: '#B6C9DB', 
+    borderWidth: 1
+  },
+  tagTxt: { 
+    color: '#423B50', 
+    fontSize: 12, 
+    fontFamily: 'Montserrat-Medium',
+  }
 });
 
 export default styles;

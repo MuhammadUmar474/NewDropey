@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, ScrollView , Modal, Pressable} from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CheckBox from '@react-native-community/checkbox';
+import ButtonComp from '../../../components/Button/ButtonComp'
 import styles from './Styles';
 import PushProductVariationCard from '../../../components/PushProductVariationCard/PushProductVariationCard';
 
@@ -33,7 +34,15 @@ const Variants = () => {
                 <View style={{height: hp('15%'), marginTop: hp('1%')}}>
                     <PushProductVariationCard />
                 </View>
+                <View>
 
+                    <ButtonComp btnName = "Save" styleBtn ={{marginTop: hp('1.5%')}}/>
+
+                    <ButtonComp btnName = "Push To Store" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#61C064'}}/>
+
+                    <ButtonComp btnName = "Remove" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#FFFFFF', borderColor: '#E1E4E8'}} styleTxt={{color: '#756D86'}}/>
+
+                </View>
         </View>
     )
 }

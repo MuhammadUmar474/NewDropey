@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Image, ScrollView, Text, TextInput } from 'react-native';
+import { View, Image, ScrollView, Text, TextInput, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import DropDownPicker from 'react-native-dropdown-picker';
+import Tags from "react-native-tags";
 import RemovableChips from 'react-native-chip/RemovableChips'
 import styles from './Styles'
 import ButtonComp from '../../../components/Button/ButtonComp';
@@ -39,15 +40,36 @@ const Product = () => {
                     />
                 </View>
 
-                <View style ={styles.tagsView}>
-                    <RemovableChips
+                {/* <View style ={styles.tagsView}> */}
+                    {/* <RemovableChips
                         label = "Enter Tags"
                         onChangeChips={(chips) => console.log(chips)} 
                         valueStyle={{color: '#423B50', fontSize:12,}}
                         chipStyle={{borderColor: '#B6C9DB', width: wp('18%'), height: hp('4.5%'), borderRadius: 5, borderWidth:1, backgroundColor: '#B6C9DB'}}
                         chipCloseStyle={{bottom: 1, color: '#423B50', fontSize: 15}}
-                        />
-                </View>
+                    /> */}
+
+                    <Tags
+                        initialText="Enter Tags#"
+                        initialTags={["Tag1", "Tag2"]}
+                        onChangeTags={tags => console.log(tags)}
+                        onTagPress={(index, tagLabel, event, deleted) =>
+                        console.log(index, tagLabel, event, deleted ? "deleted" : "not deleted")
+                        }
+                        containerStyle={styles.tagsView}
+                        inputContainerStyle={{marginTop: hp('2.5%')}}
+                        inputStyle={{ backgroundColor: "#fff",}}
+                        renderTag={({ tag, index, onPress, deleteTagOnPress, readonly }) => (
+                        <TouchableOpacity key={`${tag}-${index}`} onPress={onPress} style={styles.tagStyle}>
+                            <Text style={styles.tagTxt}>{tag}</Text>
+                            <Image 
+                            source = {require('../../../assets/images/cross.png')}
+                            style={{height: 7, width: 7, alignSelf: 'center', paddingHorizontal: 5,}}
+                            />
+                        </TouchableOpacity>
+                        )}
+                    />
+                {/* </View> */}
 
                 <View>
                     <DropDownPicker
@@ -74,6 +96,16 @@ const Product = () => {
                         textStyle={{ color: '#777777' }}
                     />
                 </View>
+
+                <View>
+
+                <ButtonComp btnName = "Save" styleBtn ={{marginTop: hp('1.5%')}}/>
+                
+                <ButtonComp btnName = "Push To Store" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#61C064'}}/>
+
+                <ButtonComp btnName = "Remove" styleBtn ={{marginTop: hp('1.5%'), backgroundColor: '#FFFFFF', borderColor: '#E1E4E8'}} styleTxt={{color: '#756D86'}}/>
+
+            </View>
             </View>
         </ScrollView>
     )
